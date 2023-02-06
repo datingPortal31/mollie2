@@ -12,7 +12,11 @@ const { createMollieClient } = require('@mollie/api-client');
 const mollieClient = createMollieClient({ apiKey: 'test_fsz4xDndpAx7V7cQq4TFH3dg7W755H' });
 
 
-
+// const ngrok = require('ngrok');
+// (async function() {
+//   const url = await ngrok.connect(3000);
+// //   Getpayment()
+// })();
 
 async function Getpayment(req,res) {
     
@@ -57,4 +61,4 @@ app.post('/webhook', async (req, res)   =>  {
   });
 
 
-app.listen(3000,()=>{console.log("Running..")})
+app.listen(80,()=>{console.log("Running..")})
